@@ -1,8 +1,11 @@
+# Paul DeHart
 def encode(password):
     res = ''
     for digit in password:
+        # encode each digit by increasing value by 3
         encoded_digit = str(int(digit) + 3)
         res += encoded_digit
+        # store each digit and return result
     return res
 
 
@@ -16,12 +19,15 @@ while menu:
     print()
     option = int(input('Please enter an option: '))
     if option == 1:
+        # take user input for password and encode using encode function
         password = str(input('Please enter your password to encode: '))
         encoded_password = encode(password)
         print('Your password has been encoded and stored!')
         print()
     elif option == 2:
+        # print the encoded password and original password
         print(f'The encoded password is {encoded_password}, and the original password is {password}')
         print()
     else:
+        # exit menu
         menu = False
