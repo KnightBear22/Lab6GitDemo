@@ -9,25 +9,26 @@ def encode(password):
     return res
 
 
-menu = True
-while menu:
-    print('Menu')
-    print('-------------')
-    print('1. Encode')
-    print('2. Decode')
-    print('3. Quit')
-    print()
-    option = int(input('Please enter an option: '))
-    if option == 1:
-        # take user input for password and encode using encode function
-        password = str(input('Please enter your password to encode: '))
-        encoded_password = encode(password)
-        print('Your password has been encoded and stored!')
+def main():
+    menu = True
+    while menu:
+        print('Menu')
+        print('-------------')
+        print('1. Encode')
+        print('2. Decode')
+        print('3. Quit')
         print()
-    elif option == 2:
-        # print the encoded password and original password
-        print(f'The encoded password is {encoded_password}, and the original password is {password}')
-        print()
-    else:
-        # exit menu
-        menu = False
+        option = int(input('Please enter an option: '))
+        if option == 1:
+            # take user input for password and encode using encode function
+            password = str(input('Please enter your password to encode: '))
+            encoded_password = encode(password)
+            print('Your password has been encoded and stored!')
+            print()
+        elif option == 2:
+            # print the encoded password and original password
+            print(f'The encoded password is {encoded_password}, and the original password is {password}')
+            print()
+        else:
+            # exit menu
+            menu = False
