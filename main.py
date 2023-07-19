@@ -8,6 +8,13 @@ def encode(password):
         # store each digit and return result
     return res
 
+def decode(encoded_password):
+    #decoding function
+    res = ""
+    for digit in encoded_password:
+        decoded_digit = str((int(digit) - 3))
+        res += decoded_digit
+    return res
 
 def main():
     menu = True
